@@ -14,11 +14,12 @@ body{
     flex-basis: 100%;
     padding:5px;
     box-sizing: border-box;
+        overflow: hidden;
 }
 .title-box{
     max-width: 100%;
     min-width: 100%;
-    height: 200px;
+    height: 106px;
     padding: 20px;
     justify-content: center;
     text-align: center;
